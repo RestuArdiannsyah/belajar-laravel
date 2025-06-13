@@ -8,7 +8,7 @@
 - Understanding What Laravel Is
 - Case Study (Blog System)
 
-## Day 2: Instalisasi and Configurasi
+## Day 2: Installation and Configuration
 - PHP
 - Laragon
 - Mysql
