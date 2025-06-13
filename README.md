@@ -4,6 +4,32 @@
 
 <p align="center">This repository contains my journey learning Laravel for the first time. Following along with tutorials, practicing concepts, and building projects to understand the Laravel framework better.</p>
 
+## Day 1: Introduction to Laravel
+- Understanding What Laravel Is
+- Case Study (Blog System)
+
+## Day 2: Instalisasi and Configurasi
+- PHP
+- Laragon
+- Mysql
+- Ngnix
+- Composer
+- Git
+- NodeJS
+- Instalisasi Laravel
+  VSCode Extensions
+  - PHP Intelphense
+  - PHP Namespace resolver
+  - Laravel Snippets
+  - Laravel Blade Snippets
+  - Laravel Blade Formatter
+  - Laravel Blade Spacer
+  - Laravel Extra Intellisense
+  - Laravel GoTo View
+  - Tailwindcss Intellisense
+  - Alpine.js Intellisense
+  - Alpine.js Syntax Hlight
+
 ## Day 8: Database & Migration
 
 Today's activities:
