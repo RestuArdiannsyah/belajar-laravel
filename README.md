@@ -30,6 +30,19 @@
   - Alpine.js Intellisense
   - Alpine.js Syntax Hlight
 
+## Day 3: Basic Laravel
+- Folder Struchture
+- Route
+- View
+
+<!-- ## Day 4: Blade Templeating Engine
+
+## Day 5: Blade Component
+
+## Day 6: View Data
+
+## Day 7: Model -->
+
 ## Day 8: Database & Migration
 
 Today's activities:
