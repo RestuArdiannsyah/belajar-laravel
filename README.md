@@ -56,7 +56,7 @@ Aktivitas hari ini:
 
 ## Hari 9: Eloquent ORM & Model Post
 
-#### Membuat Model
+### Membuat Model
 
 Generate model menggunakan artisan:
 
@@ -84,7 +84,7 @@ protected $fillable = [
 }
 ```
 
-#### Melihat Data
+### Melihat Data
 
 Di controller:
 
@@ -106,7 +106,7 @@ Di blade view:
 @endforeach
 ```
 
-#### Query Data di Laravel
+### Query Data di Laravel
 
 Jalankan perintah di terminal:
 
@@ -151,7 +151,7 @@ App\Models\Post::select('title', 'author')->get();
 
 ## Hari 10: Model Factories
 
-#### Menjalankan Factories
+### Menjalankan Factories
 
 Jalankan perintah di terminal:
 
@@ -172,7 +172,7 @@ App\Models\User::factory(10)->create();
 App\Models\User::factory()->unverified()->create();
 ```
 
-#### Membuat Factory
+### Membuat Factory
 
 ```bash
 php artisan make:factory PostFactory
@@ -215,14 +215,14 @@ App\Models\Post::factory(5)->create();
 
 ## Hari 11: Eloquent Relationship
 
-#### Jenis Relasi
+### Jenis Relasi
 
 -   One To One
 -   One To Many
 -   Many To Many
 -   Has Many Through
 
-#### Contoh Relasi One To Many
+### Contoh Relasi One To Many
 
 Model User:
 
@@ -242,7 +242,7 @@ public function user()
 }
 ```
 
-#### Mengakses Relasi
+### Mengakses Relasi
 
 Di controller:
 
