@@ -1,69 +1,69 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<h1 align="center">First Time Learning Laravel</h1>
+<h1 align="center">Belajar Laravel untuk Pertama Kali</h1>
 
-<p align="center">This repository contains my journey learning Laravel for the first time. Following along with tutorials, practicing concepts, and building projects to understand the Laravel framework better.</p>
+<p align="center">Repositori ini berisi perjalanan saya belajar Laravel untuk pertama kalinya. Mengikuti tutorial, mempraktikkan konsep, dan membangun proyek untuk memahami framework Laravel dengan lebih baik.</p>
 
-## Day 1: Introduction to Laravel
+## Hari 1: Pengenalan Laravel
 
--   Understanding What Laravel Is
--   Case Study (Blog System)
+-   Memahami Apa itu Laravel
+-   Studi Kasus (Sistem Blog)
 
-## Day 2: Installation and Configuration
+## Hari 2: Instalasi dan Konfigurasi
 
 -   PHP
 -   Laragon
--   Mysql
--   Ngnix
+-   MySQL
+-   Nginx
 -   Composer
 -   Git
 -   NodeJS
--   Instalisasi Laravel
-    VSCode Extensions
-    -   PHP Intelphense
-    -   PHP Namespace resolver
-    -   Laravel Snippets
-    -   Laravel Blade Snippets
-    -   Laravel Blade Formatter
-    -   Laravel Blade Spacer
-    -   Laravel Extra Intellisense
-    -   Laravel GoTo View
-    -   Tailwindcss Intellisense
-    -   Alpine.js Intellisense
-    -   Alpine.js Syntax Hlight
+-   Instalasi Laravel
+  Ekstensi VSCode
+  -   PHP Intelphense
+  -   PHP Namespace Resolver
+  -   Laravel Snippets
+  -   Laravel Blade Snippets
+  -   Laravel Blade Formatter
+  -   Laravel Blade Spacer
+  -   Laravel Extra Intellisense
+  -   Laravel GoTo View
+  -   Tailwindcss Intellisense
+  -   Alpine.js Intellisense
+  -   Alpine.js Syntax Highlight
 
-## Day 3: Basic Laravel
+## Hari 3: Dasar Laravel
 
--   Folder Struchture
+-   Struktur Folder
 -   Route
 -   View
 
-<!-- ## Day 4: Blade Templeating Engine
+<!-- ## Hari 4: Blade Template Engine
 
-## Day 5: Blade Component
+## Hari 5: Komponen Blade
 
-## Day 6: View Data
+## Hari 6: Data View
 
-## Day 7: Model -->
+## Hari 7: Model -->
 
-## Day 8: Database & Migration
+## Hari 8: Database & Migrasi
 
-Today's activities:
+Aktivitas hari ini:
 
--   Create Databases
--   Perform Database Rollback
--   Managing Changes in Database
+-   Membuat Database
+-   Melakukan Database Rollback
+-   Mengelola Perubahan Database
 
-## Day 9: Eloquent ORM & Post Model
+## Hari 9: Eloquent ORM & Model Post
 
--   Create Models
+### Membuat Model
   
-  Generate model using artisan:
+  Generate model menggunakan artisan:
   ```bash
   php artisan make:model Post
   ```
 
-  Example Post model:
+  Contoh Model Post:
   ```php
   <?php
 
@@ -73,70 +73,129 @@ Today's activities:
 
   class Post extends Model
   {
-    protected $fillable = [
-      'title',
-      'author', 
-      'slug',
-      'body'
-    ];
+  protected $fillable = [
+    'title',
+    'author', 
+    'slug',
+    'body'
+  ];
   }
   ```
 
--   View Data
+### Melihat Data
   
-  In controller:
+  Di controller:
   ```php
   public function index()
   {
-    $posts = Post::all();
-    return view('posts.index', compact('posts'));
+  $posts = Post::all();
+  return view('posts.index', compact('posts'));
   }
   ```
 
-  In blade view:
+  Di blade view:
   ```php
   @foreach($posts as $post)
-    <h2>{{ $post->title }}</h2>
-    <p>By: {{ $post->author }}</p>
-    <p>{{ $post->body }}</p>
+  <h2>{{ $post->title }}</h2>
+  <p>Oleh: {{ $post->author }}</p>
+  <p>{{ $post->body }}</p>
   @endforeach
   ```
 
--   Query Data in Laravel
+### Query Data di Laravel
 
-  Run command in terminal:
+  Jalankan perintah di terminal:
 
   ```bash
   php artisan tinker
   ```
 
-  Insert data example:
+  Contoh memasukkan data:
 
   ```php
   App\Models\Post::create([
-    'title' => 'New Indonesia sovereign wealth fund to invest $20 billion in projects',
-    'author' => 'Stefanno Sulaiman and Ananda Teresia',
-    'slug' => 'new-indonesia-sovereign-wealth-fund-to-invest-20-billion-in-projects',
-    'body' => 'Pemerintah Indonesia meluncurkan dana kekayaan negara bernama Danantara Indonesia dengan target investasi US$20 miliar di sektor logam, AI, energi hijau, dan pertanian. Dana ini bertujuan mendongkrak pertumbuhan ekonomi dan dipisahkan dari lembaga lama untuk meningkatkan transparansi.'
+  'title' => 'Dana Kekayaan Negara Indonesia Baru akan Investasi $20 Miliar dalam Proyek',
+  'author' => 'Stefanno Sulaiman dan Ananda Teresia',
+  'slug' => 'dana-kekayaan-negara-indonesia-baru-akan-investasi-20-miliar-dalam-proyek',
+  'body' => 'Pemerintah Indonesia meluncurkan dana kekayaan negara bernama Danantara Indonesia dengan target investasi US$20 miliar di sektor logam, AI, energi hijau, dan pertanian. Dana ini bertujuan mendongkrak pertumbuhan ekonomi dan dipisahkan dari lembaga lama untuk meningkatkan transparansi.'
   ]);
   ```
 
-  Show all data:
+  Menampilkan semua data:
   ```php
   App\Models\Post::all();
   ```
 
-  Get first record:
+  Mendapatkan record pertama:
   ```php
   App\Models\Post::first();
   ```
 
-  Find by ID:
+  Mencari berdasarkan ID:
   ```php
   App\Models\Post::find(1);
   ```
 
-  Get specific columns:
+  Mendapatkan kolom tertentu:
   ```php
   App\Models\Post::select('title', 'author')->get();
   ```
+
+## Hari 10: Model Factories
+
+### Menjalankan Factories
+
+Jalankan perintah di terminal:
+```bash
+php artisan tinker
+```
+
+Membuat data pengguna:
+```php
+# Membuat 1 data pengguna
+App\Models\User::factory()->create();
+
+# Membuat 10 data pengguna
+App\Models\User::factory(10)->create();
+
+# Membuat pengguna dengan email belum terverifikasi
+App\Models\User::factory()->unverified()->create();
+```
+### Membuat Factory
+```bash
+php artisan make:factory PostFactory
+```
+
+
+Contoh kode factory untuk model Post di `database/factories/PostFactory.php`:
+```php
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
+
+class PostFactory extends Factory
+{
+  public function definition(): array
+  {
+    $title = fake()->sentence();
+    return [
+      'title' => $title,
+      'author' => fake()->name(),
+      'slug' => Str::slug($title),
+      'body' => fake()->paragraph(3)
+    ];
+  }
+}
+```
+
+Membuat data post dummy:
+```php
+# Membuat 1 post
+App\Models\Post::factory()->create();
+
+# Membuat 5 post sekaligus
+App\Models\Post::factory(5)->create();
+```
