@@ -31,7 +31,7 @@ Route::get('/authors/{user:username}', function (User $user) {
 
 Route::get('/categories/{category:slug}', function (Category $category) {
     // $posts = $category->posts->load('category', 'author');
-    return view('posts', ['title' => 'Articles in: ' . $category->name, 'posts' => $category->posts]);
+    return view('posts', ['title' => count($category->posts) . ' Articles In ' . $category->name, 'posts' => $category->posts]);
 });
 
 Route::get('/contact', function () {

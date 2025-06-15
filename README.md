@@ -5,67 +5,57 @@
 <p align="center">Repositori ini berisi perjalanan saya belajar Laravel untuk pertama kalinya. Mengikuti tutorial, mempraktikkan konsep, dan membangun proyek untuk memahami framework Laravel dengan lebih baik.</p>
 
 ## Hari 1: Pengenalan Laravel
-
--   Memahami Apa itu Laravel
--   Studi Kasus (Sistem Blog)
+- Memahami Apa itu Laravel
+- Studi Kasus (Sistem Blog)
 
 ## Hari 2: Instalasi dan Konfigurasi
+- PHP
+- Laragon 
+- MySQL
+- Nginx
+- Composer
+- Git
+- NodeJS
+- Instalasi Laravel
 
--   PHP
--   Laragon
--   MySQL
--   Nginx
--   Composer
--   Git
--   NodeJS
--   Instalasi Laravel
-    Ekstensi VSCode
--   PHP Intelphense
--   PHP Namespace Resolver
--   Laravel Snippets
--   Laravel Blade Snippets
--   Laravel Blade Formatter
--   Laravel Blade Spacer
--   Laravel Extra Intellisense
--   Laravel GoTo View
--   Tailwindcss Intellisense
--   Alpine.js Intellisense
--   Alpine.js Syntax Highlight
+### Ekstensi VSCode
+- PHP Intelphense
+- PHP Namespace Resolver
+- Laravel Snippets
+- Laravel Blade Snippets
+- Laravel Blade Formatter
+- Laravel Blade Spacer
+- Laravel Extra Intellisense
+- Laravel GoTo View
+- Tailwindcss Intellisense
+- Alpine.js Intellisense
+- Alpine.js Syntax Highlight
 
 ## Hari 3: Dasar Laravel
-
--   Struktur Folder
--   Route
--   View
+- Struktur Folder
+- Route
+- View
 
 <!-- ## Hari 4: Blade Template Engine
-
 ## Hari 5: Komponen Blade
-
-## Hari 6: Data View
-
+## Hari 6: Data View 
 ## Hari 7: Model -->
 
 ## Hari 8: Database & Migrasi
-
 Aktivitas hari ini:
-
--   Membuat Database
--   Melakukan Database Rollback
--   Mengelola Perubahan Database
+- Membuat Database
+- Melakukan Database Rollback
+- Mengelola Perubahan Database
 
 ## Hari 9: Eloquent ORM & Model Post
 
 ### Membuat Model
-
 Generate model menggunakan artisan:
-
 ```bash
 php artisan make:model Post
 ```
 
 Contoh Model Post:
-
 ```php
 <?php
 
@@ -75,76 +65,66 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-protected $fillable = [
-  'title',
-  'author',
-  'slug',
-  'body'
-];
+  protected $fillable = [
+    'title',
+    'author',
+    'slug', 
+    'body'
+  ];
 }
 ```
 
 ### Melihat Data
-
 Di controller:
-
 ```php
 public function index()
 {
-$posts = Post::all();
-return view('posts.index', compact('posts'));
+  $posts = Post::all();
+  return view('posts.index', compact('posts'));
 }
 ```
 
 Di blade view:
-
 ```php
 @foreach($posts as $post)
-<h2>{{ $post->title }}</h2>
-<p>Oleh: {{ $post->author }}</p>
-<p>{{ $post->body }}</p>
+  <h2>{{ $post->title }}</h2>
+  <p>Oleh: {{ $post->author }}</p>
+  <p>{{ $post->body }}</p>
 @endforeach
 ```
 
 ### Query Data di Laravel
-
 Jalankan perintah di terminal:
-
 ```bash
 php artisan tinker
 ```
 
 Contoh memasukkan data:
-
 ```php
 App\Models\Post::create([
-'title' => 'Dana Kekayaan Negara Indonesia Baru akan Investasi $20 Miliar dalam Proyek',
-'author' => 'Stefanno Sulaiman dan Ananda Teresia',
-'slug' => 'dana-kekayaan-negara-indonesia-baru-akan-investasi-20-miliar-dalam-proyek',
-'body' => 'Pemerintah Indonesia meluncurkan dana kekayaan negara bernama Danantara Indonesia dengan target investasi US$20 miliar di sektor logam, AI, energi hijau, dan pertanian. Dana ini bertujuan mendongkrak pertumbuhan ekonomi dan dipisahkan dari lembaga lama untuk meningkatkan transparansi.'
+  'title' => 'Dana Kekayaan Negara Indonesia Baru akan Investasi $20 Miliar dalam Proyek',
+  'author' => 'Stefanno Sulaiman dan Ananda Teresia',
+  'slug' => 'dana-kekayaan-negara-indonesia-baru-akan-investasi-20-miliar-dalam-proyek',
+  'body' => 'Pemerintah Indonesia meluncurkan dana kekayaan negara bernama Danantara Indonesia dengan target investasi US$20 miliar di sektor logam, AI, energi hijau, dan pertanian. Dana ini bertujuan mendongkrak pertumbuhan ekonomi dan dipisahkan dari lembaga lama untuk meningkatkan transparansi.'
 ]);
 ```
 
 Menampilkan semua data:
-
 ```php
 App\Models\Post::all();
 ```
 
 Mendapatkan record pertama:
-
 ```php
 App\Models\Post::first();
 ```
 
 Mencari berdasarkan ID:
-
 ```php
 App\Models\Post::find(1);
 ```
 
 Mendapatkan kolom tertentu:
-
 ```php
 App\Models\Post::select('title', 'author')->get();
 ```
@@ -152,15 +132,12 @@ App\Models\Post::select('title', 'author')->get();
 ## Hari 10: Model Factories
 
 ### Menjalankan Factories
-
 Jalankan perintah di terminal:
-
 ```bash
 php artisan tinker
 ```
 
 Membuat data pengguna:
-
 ```php
 # Membuat 1 data pengguna
 App\Models\User::factory()->create();
@@ -173,13 +150,11 @@ App\Models\User::factory()->unverified()->create();
 ```
 
 ### Membuat Factory
-
 ```bash
 php artisan make:factory PostFactory
 ```
 
 Contoh kode factory untuk model Post di `database/factories/PostFactory.php`:
-
 ```php
 <?php
 
@@ -204,7 +179,6 @@ class PostFactory extends Factory
 ```
 
 Membuat data post dummy:
-
 ```php
 # Membuat 1 post
 App\Models\Post::factory()->create();
@@ -216,16 +190,13 @@ App\Models\Post::factory(5)->create();
 ## Hari 11: Eloquent Relationship
 
 ### Jenis Relasi
-
--   One To One
--   One To Many
--   Many To Many
--   Has Many Through
+- One To One
+- One To Many  
+- Many To Many
+- Has Many Through
 
 ### Contoh Relasi One To Many
-
 Model User:
-
 ```php
 public function posts()
 {
@@ -234,7 +205,6 @@ public function posts()
 ```
 
 Model Post:
-
 ```php
 public function user()
 {
@@ -243,9 +213,7 @@ public function user()
 ```
 
 ### Mengakses Relasi
-
 Di controller:
-
 ```php
 $user = User::find(1);
 $posts = $user->posts; // mengambil semua post user
@@ -255,13 +223,21 @@ $author = $post->user; // mengambil user pemilik post
 ```
 
 Di blade:
-
 ```php
 @foreach($user->posts as $post)
   <h3>{{ $post->title }}</h3>
   <p>By: {{ $post->user->name }}</p>
 @endforeach
 ```
+
 ## Hari 12: Post Category
+
 ## Hari 13: Database Seeder
+
 ## Hari 14: N + 1 Problem
+
+## Hari 15: Redesign UI
+### Instalasi Flowbite
+```bash
+npm install -D flowbite
+```
