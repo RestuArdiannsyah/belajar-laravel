@@ -263,3 +263,4 @@ Di blade:
 @endforeach
 ```
 ## Hari 12: Post Category
+## Hari 13: Database Seeder
