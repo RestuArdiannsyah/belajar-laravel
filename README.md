@@ -264,3 +264,4 @@ Di blade:
 ```
 ## Hari 12: Post Category
 ## Hari 13: Database Seeder
+## Hari 14: N + 1 Problem
