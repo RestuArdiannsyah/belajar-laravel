@@ -262,3 +262,4 @@ Di blade:
   <p>By: {{ $post->user->name }}</p>
 @endforeach
 ```
+## Hari 12: Post Category
